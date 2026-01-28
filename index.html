@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Zettel Garden</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
   <div id="app"></div>
 
   <!-- Docsify core -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   
   <!-- Plugin wikilinks -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-wikilinks/dist/docsify-wikilinks.min.js"></script>
@@ -17,8 +17,10 @@
   <script>
     window.$docsify = {
       name: 'Zettel Garden',
+      repo: 'https://github.com/MariaScetta/zettel-garden',  // link al tuo repo
       loadSidebar: true,
       subMaxLevel: 2,
+      basePath: '/zettel-garden/',   // fondamentale per GitHub Pages project page
       plugins: [
         window.DocsifyWikiLinks
       ]
