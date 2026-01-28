@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test nota.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test nota"
+              "title": "README"
             }
           }
         ]
@@ -186,13 +186,13 @@
   },
   "active": "3c902194ecea2d21",
   "lastOpenFiles": [
-    "_sidebar.md.md",
     "_sidebar.md",
     "README.md",
+    "test nota.md",
+    "_sidebar.md.md",
     "index.html",
     "index.html.html",
     "README.md.md",
-    "test nota.md",
     "index.html.md",
     "Welcom.md"
   ]
