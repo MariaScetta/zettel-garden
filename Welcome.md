@@ -1,5 +1,4 @@
-This is your new *vault*.
-
-Make a note of something, [[create a link]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
-
-When you're ready, delete this note and make the vault your own.
+---
+publish: "true"
+---
+I figured since I love getting lost in rabbit holes The only way to document this would have been using a zettel garden.
