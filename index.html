@@ -4,27 +4,31 @@
   <meta charset="UTF-8">
   <title>Zettel Garden</title>
 
-  <!-- Docsify -->
+  <!-- Docsify core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-
 
   <!-- Plugin wikilinks -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-wikilinks"></script>
 </head>
 <body>
   <div id="app">Loading...</div>
+
   <script>
+    // Configurazione Docsify
     window.$docsify = {
       name: 'Zettel Garden',
-      repo: '',               // opzionale, link al repo GitHub
-      loadSidebar: false,      // abilita la sidebar
+      repo: '',               // opzionale: link al tuo repo GitHub
+      loadSidebar: false,     // disattiviamo sidebar per ora
       subMaxLevel: 2,         // massimo livello dei titoli
       markdownIt: window.markdownit(),
       plugins: [
-        window.DocsifyWikiLinks()
+        window.DocsifyWikiLinks({
+          baseURL: '',        // se hai sottocartelle per le note, aggiungile qui
+          extension: '.md'
+        })
       ]
-    }
+    };
   </script>
 </body>
 </html>
