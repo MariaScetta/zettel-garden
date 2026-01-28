@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_sidebar.md.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_sidebar.md"
+              "title": "README"
             }
           }
         ],
@@ -215,11 +215,11 @@
   },
   "active": "3c902194ecea2d21",
   "lastOpenFiles": [
+    "_sidebar.md.md",
     "test nota.md",
     "README.md",
     "index.html.md",
     "index.html",
-    "_sidebar.md.md",
     "Welcom.md"
   ]
 }
