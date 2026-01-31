@@ -14,17 +14,18 @@
   <!-- Plugin wikilinks -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-wikilinks/dist/docsify-wikilinks.min.js"></script>
 
-  <script>
-    window.$docsify = {
-      name: 'Zettel Garden',
-      repo: 'https://github.com/MariaScetta/zettel-garden',  // link al tuo repo
-      loadSidebar: true,
-      subMaxLevel: 2,
-      basePath: '/zettel-garden/',   // fondamentale per GitHub Pages project page
-      plugins: [
-        window.DocsifyWikiLinks
-      ]
-    }
-  </script>
+ <script>
+  window.$docsify = {
+    name: 'Zettel Garden',
+    repo: 'https://github.com/MariaScetta/zettel-garden',
+    loadSidebar: true,
+    subMaxLevel: 2,
+    homepage: 'README.md',
+    plugins: [
+      window.DocsifyWikiLinks
+    ]
+  }
+</script>
+
 </body>
 </html>
