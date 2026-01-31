@@ -11,8 +11,11 @@
   <!-- Docsify core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   
-  <!-- Plugin wikilinks -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-wikilinks/dist/docsify-wikilinks.min.js"></script>
+  <!-- Wikilinks (Obsidian-style) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+
+  <!-- YAML parser -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 
  <script>
   window.$docsify = {
@@ -25,6 +28,37 @@
       window.DocsifyWikiLinks
     ]
   }
+
+  function frontmatterAndPublishGate(hook, vm) {
+    hook.beforeEach(function (content) {
+      // 1) Estrai + rimuovi YAML frontmatter (così non si vede mai)
+      let fm = {};
+      const m = content.match(/^---\n([\s\S]*?)\n---\n?/);
+
+      if (m) {
+        try {
+          fm = window.jsyaml.load(m[1]) || {};
+        } catch (e) {
+          fm = {};
+        }
+        content = content.slice(m[0].length);
+      }
+
+      // 2) Se publish === false -> "nascondi" la pagina
+      // (default: visibile)
+      if (fm.publish === false) {
+        return `# 404
+        Questa pagina non è pubblicata.
+
+        [Torna alla home](README.md)`;
+      }
+
+      return content;
+    });
+  }
+
+  window.$docsify = window.$docsify || {};
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat(frontmatterAndPublishGate);
 </script>
 
 </body>

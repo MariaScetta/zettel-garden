@@ -1,0 +1,10 @@
+# cache / indici (spesso inutili sincronizzarli)
+/.obsidian/cache/
+**/.DS_Store
+**/Thumbs.db
+
+# cestino (opzionale, se lo usi)
+.trash/
+
+# eventuali cartelle di export
+/export/
